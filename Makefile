@@ -7,6 +7,9 @@ RESUME = resume
 # Default target
 package: clean ps pdf
 
+symlink:
+	ln -s res/res.cls res.cls
+
 sanitize: 
 	rm -rf $(TEMP_FILES)
 
