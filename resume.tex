@@ -1,5 +1,11 @@
 \documentclass[11pt]{res}
 
+% Some compilation flags:
+%   - skillsGrid: Use a grid for the skills section
+\usepackage{ifthen}
+\newboolean{skillsGrid}
+\setboolean{skillsGrid}{true}
+
 % Margin tweaks:
 %   - decrease left margin
 %   - increase total text width
@@ -10,8 +16,8 @@
 %\usepackage[margin=1.0in]{geometry}
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\textwidth}{0.75in}
-\addtolength{\voffset}{-0.30in}
-\addtolength{\textheight}{1.50in}
+\addtolength{\voffset}{-0.50in}
+\addtolength{\textheight}{1.75in}
 
 % Name tweaks:
 %   - increase font size
@@ -42,6 +48,7 @@
 {\bf Contributer:} Media Goblin\dotfill May 2011 to present
 \begin{itemize}
 \item Added unit tests to many untested areas of the application.
+\item Work as part of a distrbuted team
 \end{itemize}
 
 {\bf Software Engineer:} Tribune Company\dotfill April 2010 to present\\
@@ -49,6 +56,8 @@ Chicago, IL
 \begin{itemize}
 \item Added features to internal Rails CMS powering 50 national news sites
 \item Utilized Black Magic to write Javascript
+\item Assisted Rails 3 upgrade on complex Rails application
+\item Rewrote many Javascript things
 \end{itemize}
 
 {\bf Lead Developer:} Greenlite Web Solutions\dotfill August 2009 to April 2010\\
@@ -68,13 +77,13 @@ Southfield, MI
 \item Interacted with end users to refine requirements and tailor system to specific needs
 \end{itemize}
 
-{\bf Wireless Assistant:} MSU Computer Center (ACNS)\dotfill April 2007 to May 2008
-\begin{itemize}
-\item Developed web applications with PHP, Javascript and PostgreSQL
-\item Determined placement of 802.11 a/b/g/n access poitns based on floor layout
-\item Collaborated with network engineers to troubleshoot wireless problems
-\item Utilized wireless survey software to verify optimal placement of access points
-\end{itemize}
+%{\bf Wireless Assistant:} MSU Computer Center (ACNS)\dotfill April 2007 to May 2008
+%\begin{itemize}
+%\item Developed web applications with PHP, Javascript and PostgreSQL
+%\item Determined placement of 802.11 a/b/g/n access poitns based on floor layout
+%\item Collaborated with network engineers to troubleshoot wireless problems
+%\item Utilized wireless survey software to verify optimal placement of access points
+%\end{itemize}
 
 
 \section{Education}
@@ -87,52 +96,10 @@ Michigan State University
 \end{itemize}
 
 
-\section{Skills}
-\begin{ncolumn}{2}
-  {\bf Languages:}
-  \begin{itemize}
-  \item Python
-  \item Ruby/Rails
-  \item PHP
-  % \item C
-  % \item SQL (PostgreSQL, MySQL, DB2)
-  \item Javascript
-  \item XHTML/CSS
-  % \item COBOL, JCL
-  \item Java (J2EE, Servlets, JSP, JavaBeans)
-  \end{itemize}
-&
-  {\bf Operating Systems:}
-  \begin{itemize}
-  \item Linux (Debian, CentOS, Gentoo, Slackware)
-  \item Mac OS X
-  %\item Experience compiling/configuring Postfix, Apache, PHP, MySQL
-  \item Use Linux command line daily
-  \item IBM z/OS (mainframe)
-  \end{itemize}
-\end{ncolumn}
+% Import skills from external file
+\input{skills.tex}
 
-\begin{ncolumn}{2}
-  {\bf Programs:}
-  \begin{itemize}
-  %\item Adobe Photoshop, InDesign, Illustrator
-  \item Git, SVN, CVS
-  \item Vi/Vim
-  \item zsh, bash
-  \item tmux, screen
-  \item \LaTeX
-  \end{itemize}
-&
-  {\bf Misc:}
-  \begin{itemize}
-  \item Administer web/email server in spare time
-  % \item Exhaustive experience with DNS
-  \item Quick learner
-  \item A preference for Vi over Emacs
-  \item Enjoy finding elegant solutions for complex problems
-  \end{itemize}
-\end{ncolumn}
-
+\center\footnotesize Code samples (including the source of this \Resume) can be found at github.com/cmoylan
 
 \end{resume}
 \end{document}
