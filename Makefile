@@ -1,4 +1,4 @@
-TEMP_FILES = *.aux *.dvi *.log *.out
+TEMP_FILES = *.aux *.bak *.dvi *.log *.out
 OUT_FILES = *pdf *.ps
 
 RESUME = resume
@@ -27,3 +27,6 @@ ps: compile
 
 pdf: compile
 	dvipdf $(RESUME).dvi
+
+spell:
+	ispell -t *.tex
