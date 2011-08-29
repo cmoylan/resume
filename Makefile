@@ -23,7 +23,7 @@ dvi: compile
 	xdvi $(RESUME).dvi &
 
 ps: compile
-	dvips -Pcmz $(RESUME).dvi -o $(RESUME).ps
+	dvips -t letter -Pcmz $(RESUME).dvi -o $(RESUME).ps
 
 pdf: compile
 	dvipdf $(RESUME).dvi
